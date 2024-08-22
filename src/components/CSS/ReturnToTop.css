@@ -1,0 +1,43 @@
+/* ReturnToTop.css */
+.return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff; /* Change to your desired background color */
+    color: rgb(44, 43, 43);
+    border: none;
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .return-to-top:hover {
+    background-color: #0b1215; /* Change to your desired hover color */
+    color: antiquewhite;
+  }
+  
+  .return-to-top svg {
+    fill: currentColor;
+  }
+  
+  /* Media Queries for additional responsiveness */
+
+@media (max-width: 768px) {
+    .return-to-top {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .return-to-top {
+      display: none;
+    }
+  }
+  

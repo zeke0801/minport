@@ -1,0 +1,128 @@
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    padding: 2vh 0 3vh 0;
+    background-color: var(--main-background-color);
+  }
+  
+  .colored-div {
+    background: linear-gradient(to bottom, #1e1f1a 50%, rgb(46, 42, 42) 50%);
+    height: 100%; /* Adjust height as needed */
+    width: 100%; /* Adjust width as needed */
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text horizontally */
+  }
+
+  .colored-div h1, .inv-colored-div h1 {
+    font-family: var(--font-subheading);
+    font-weight: bold;
+    font-size: 8vh;
+    color: antiquewhite;
+  }
+  
+  .colored-div span, .inv-colored-div span {
+    flex-shrink: 0; /* Space between text and line */
+    margin: 2vh;
+  }
+  
+  .colored-div::before, .inv-colored-div::before {
+    content: "";
+    flex-grow: 1;
+    height: 2px; /* Line thickness */
+    background-color: var(--main-font-color);
+  }
+  .colored-div::after, .inv-colored-div::after {
+    content: "";
+    flex-grow: 1;
+    height: 2px; /* Line thickness */
+    background-color: var(--main-font-color);
+  }
+
+  .sect-cont {
+    background-color: rgb(46, 42, 42);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding: 2vh 10vh 8vh 10vh;
+    gap: 1vh;
+    align-items: center;
+  }
+
+  .email, .phone {
+    background-color:  #1e1f1a;
+    color: var(--main-font-color);
+    font-size: 3vh;
+    padding: 2vh 3vh;
+    border-radius: 1vh;
+    display: flex;
+    align-items: center; /* Vertically center the image and text */
+    gap: 1vh; /* Space between the image and text */
+    text-align: center;
+    justify-content: center;
+    width: 40vh;
+  }
+  
+  .email img, .phone img {
+    width: 4vh;
+  }
+
+  .inv-colored-div {
+    background: linear-gradient(to bottom, rgb(46, 42, 42) 50%, #1e1f1a 50%) ;
+    height: 100%; /* Adjust height as needed */
+    width: 100%; /* Adjust width as needed */
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text horizontally */
+  }
+
+  .inv-colored-div img {
+    width: 6vh;
+    margin: 0vh 1vh 0vh 1vh;
+  }
+
+  /* Media Queries for responsiveness */
+
+@media (max-width: 768px) {
+  .colored-div h1, .inv-colored-div h1 {
+    font-size: 5vh; /* Reduce font size for tablets */
+  }
+
+  .sect-cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .email, .phone {
+    width: 30vh; /* Adjust width for tablets */
+    font-size: 2vh; /* Reduce font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2vh 0vh 5vh 0vh; /* Adjust padding for mobile screens */
+  }
+
+  .colored-div h1, .inv-colored-div h1 {
+    font-size: 4vh; /* Further reduce font size for mobile */
+  }
+
+  .sect-cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .email, .phone {
+    width: 100%; /* Full width on mobile screens */
+    font-size: 1.8vh; /* Further reduce font size */
+    padding: 1.5vh 2vh; /* Adjust padding */
+  }
+
+  .email img, .phone img {
+    width: 3vh; /* Adjust image size for mobile */
+  }
+}

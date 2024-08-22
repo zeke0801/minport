@@ -1,0 +1,22 @@
+.email-header {
+    font-family: var(--font-body);
+    font-size: 2vh;
+  }
+  
+  .email-input {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  .copy-icon {
+    width: 3vh;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: opacity 0.3s;
+  }
+
+  .copy-icon:hover {
+    background-color: aqua;
+    border-radius: 1vh;
+  }
+  

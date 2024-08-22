@@ -1,0 +1,102 @@
+.triangleGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.triangleRow {
+  display: flex;
+  justify-content: center;
+}
+
+.aoe-block {
+  font-family: var(--font-body);
+  color: var(--background-color);
+  font-weight: 510;
+  padding: 3vh;
+  margin: 2vh;
+  background-color: var(--background-color-two);
+  border-radius: 2vh;
+  width: auto;
+  opacity: 0; /* Start as invisible */
+  transform: translateY(-20px); /* Start slightly above */
+  position: relative; /* Ensure positioning context for overlay */
+  overflow: hidden; /* Ensure children don't overflow */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.aoe-block img {
+  width: 15vh;
+  height: auto;
+}
+
+.aoe-block:hover {
+  background-color: rgb(58, 58, 58) ;
+  color: var(--font-color);
+}
+
+.block-info {
+  display: none; /* Hide by default */
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: rgb(207, 191, 15);
+  color: var(--font-color);
+  font-size: 1.2rem;
+  padding: 2vh;
+}
+
+/* Show .block-info on hover with no additional animations */
+.aoe-block:hover .block-info {
+  display: block; /* Show instantly on hover */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+
+}
+
+@media (max-width: 768px) {
+  .triangleRow {
+    flex-direction: column; /* Stack blocks vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .aoe-block {
+    width: 100%; /* Make blocks full width on small screens */
+    max-width: 200px; /* Set a max-width to avoid overly wide blocks */
+  }
+
+  .block-info {
+    display: none; /* Hide by default */
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    padding: 2vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .aoe-block {
+    max-width: 150px; /* Further reduce max-width on very small screens */
+  }
+
+  .block-info {
+    display: none; /* Hide by default */
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    border-radius: 10%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    padding: 2vh;
+  }
+}

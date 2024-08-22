@@ -1,0 +1,126 @@
+.animate-on-scroll {
+  opacity: 0; /* Elements start invisible */
+}
+
+.about {
+  animation: slideIn 1s ease-out;
+  padding: 20vh 15vh 20vh 15vh;
+  background-color:var(--background-color-two);
+}
+
+.about span {
+  color: var(--font-color);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+}
+
+.divider span {
+  font-family: var(--font-h1);
+  font-weight: bold;
+  font-size: 8vh;
+  flex-shrink: 0;
+  padding-right: 10px; /* Space between text and line */
+}
+
+.marker {
+  display: flex;
+  align-items: center; /* Center align items vertically */
+  margin-bottom: 20px;
+}
+
+.y-mark {
+  width: 50%;
+  display: flex; /* Use flex to position text and line */
+  align-items: center; /* Center align items vertically */
+}
+
+.y-mark span {
+  font-size: 5vh;
+  flex-shrink: 0; /* Space between text and line */
+}
+
+.y-mark::before {
+  content: "";
+  flex-grow: 1;
+  height: 2px; /* Line thickness */
+  color: var(--font-color);
+}
+
+.marker .par span {
+  color: var(--font-color);
+  font-weight: bold;
+}
+
+.about p {
+  font-family: var(--font-body);
+  line-height: 1.6; 
+  padding-left: 2vh;
+  text-align: left;
+  color: var(--font-color);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  font-size: 4vh;
+  color: var(--font-color);
+}
+
+.attributes{
+  width: 50%;
+  text-align: right;
+  padding-right: 1vh;
+
+}
+.attributes-cor{
+  width: 50%;
+  text-align: left;
+  padding-left: 1vh;
+}
+
+@media (max-width: 768px) {
+  .y-mark span, .y-mark::before{
+    display: none;
+  }
+
+  .about, .about p {
+    text-align: center;
+    padding: 2vh;
+  }
+
+  .divider {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .divider span {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .y-mark span, .y-mark::before{
+    display: none;
+  }
+
+  .about, .about p {
+    text-align: center;
+    padding: 2vh;
+  }
+
+  .divider {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .divider span {
+    padding: 0;
+  }
+}

@@ -1,0 +1,77 @@
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling for all anchor links */
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 20vh 1vh 20vh;
+  background-color: var(--background-color); /* Fixed variable syntax */
+  color: var(--submain-font-color);
+}
+
+.App-header h3{
+  color: #0b1215;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-weight: bold;
+  color: #686868;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative; /* Required for positioning the underline */
+  padding-bottom: 5px; /* Space for the underline */
+}
+
+.nav-links a:hover {
+  color: var(--font-color-two);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: var(--font-color-two);
+  transition: width 0.3s ease; /* Smooth transition */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Underline spans the full width on hover */
+}
+
+.nav-links .active {
+  color: var(--main-font-color);
+}
+
+@media (max-width: 768px) {
+  .App-header{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links{
+    display: none;
+  }
+}
+

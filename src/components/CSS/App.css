@@ -1,0 +1,34 @@
+/*Universal*/
+
+:root {
+  /*Backgroud Color*/
+  --background-color: #d3d1cca7;
+  --background-color-two: #0d1317;
+
+  /*Font Colors*/
+  --font-color: #faf9f6c8;
+  --font-color-two: #0b1215;
+  
+  /*Font Family*/
+  --font-h1: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --font-hOthers: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --font-body: 'candara';
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+ background-color:var(--background-color);
+}
+
+.copy-paste-container {
+  display: flex;
+  align-items: center; /* Vertically centers the icon with the text */
+}
+
+.copy-paste-container img {
+  margin-left: 8px; /* Space between text and icon */
+}
+
+
